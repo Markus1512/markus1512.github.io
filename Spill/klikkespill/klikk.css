@@ -11,11 +11,21 @@ a {
   padding: 5px;
 }
 
-h1 {
+h1{
   text-align: center;
   margin-top: 50px;
   font-size: 36px;
   color: #DAA520;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+ul {
+  text-align: center;
+  color: #fff;
 }
 
 #klikk-knapp {
