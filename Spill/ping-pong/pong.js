@@ -2,6 +2,10 @@
 const cvs = document.getElementById("pong");
 const ctx = cvs.getContext("2d");
 
+// Finn knappene i HTML-filen
+const startBtn = document.getElementById("start-btn");
+const stopBtn = document.getElementById("stop-btn");
+
 // lag brukeren sin rekkert
 const user = {
     x : 0,
@@ -55,6 +59,7 @@ function drawNet(){
         drawRect(net.x, net.y + i, net.width, net.height, net.color);
     }
 }
+
 // Tegn sirkel 
 function drawCircle(x,y,r,color){
     ctx.fillStyle = color;
@@ -70,6 +75,23 @@ function drawText(text,x,y,color){
     ctx.font = "45px fantasy";
     ctx.fillText(text,x,y);
 }
+// Legg til en hendelselytter til stopp-knappen
+stopBtn.addEventListener("click", function() {
+    // Stopp ballens bevegelse
+    ball.velocityX = 0;
+    ball.velocityY = 0;
+});
+
+// Legg til en hendelselytter til start-knappen
+startBtn.addEventListener("click", function() {
+    ball.velocityX = 5;
+    ball.velocityY = 5;
+    ball.x = cvs.width/2;
+    ball.y = cvs.height/2;
+
+    ball.speed = 5;
+    ball.velocityX = -ball.velocityX;
+});
 
 // render spillet
 function render(){
