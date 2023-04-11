@@ -78,6 +78,14 @@ h2, p {
 }
 
 img {
-    width: 300px;
+    width: 200px;
     padding: 30px;
+}
+
+#nett {
+    color: #DAA520;
+    font-size: 25px;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
 }
